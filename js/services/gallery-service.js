@@ -31,8 +31,6 @@ const gImages = [
 function renderGallery() {
   const fImgs = getFilteredImages();
 
-  if (!fImgs.length) return (gSelection.innerHTML = 'Unknown');
-
   const string = fImgs.map(
     (image) =>
       `<img src="img/memes/${image.id}.jpg" data-id="${image.id}" />`
