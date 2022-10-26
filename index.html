@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liel Raui - Sprint 2(Memesgen)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body onload="onInit()">
+    <div class="main-screen""></div>
+    <div class="main-layout">
+      <header class="main-header df sb ac">
+        <a class="logo" href="#" onclick="onInitGallery(event)">MEME GENERATOR</a>
+        <nav class="main-nav">
+          <ul class="ln df">
+            <li><a href="#" onclick="onInitGallery(event)">Gallery</a></li>
+            <li><a href="#" onclick="onInitMemes(event)">Memes</a></li>
+            <li><a href="#" onclick="onInitAbout(event)">About</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div class="main-gallery">
+          <div class="top-bar df sb">
+            <div class="search-holder df">
+              <input
+                type="search"
+                class="search-input"
+                list="auto-list"
+                placeholder="Search"
+                onkeydown="onSearchKeyword(this)"
+                onkeyup="onSearchKeyword(this)"
+              />
+              <datalist id="auto-list"></datalist>
+              <input type="image" src="img/ui/search.png" alt="" />
+            </div>
+            <div class="demo-data df ac jc"></div>
+          </div>
+          <div class="selection"></div>
+        </div>
+</body>
+
+    <script src="js/services/utils-service.js"></script>
+    <script src="js/services/storage-service.js"></script>
+    <script src="js/services/gallery-service.js"></script>
+    <script src="js/gallery-controller.js"></script>
+    <script src="js/services/editor-service.js"></script>
+    <script src="js/editor-controller.js"></script>
+
+</html>
