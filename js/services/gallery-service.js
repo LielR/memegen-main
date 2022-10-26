@@ -33,10 +33,23 @@ function renderGallery() {
 
   const string = fImgs.map(
     (image) =>
-      `<img src="img/memes/${image.id}.jpg" data-id="${image.id}" />`
+      `<img src="img/memes/${image.id}.jpg" data-id="${image.id}" onclick="onSelectedImage(this)" />`
   );
 
   gSelection.innerHTML = string.join('');
+}
+
+function renderMemes() {
+  const memes = loadFromStorage(KEY_MEMES);
+
+  if (!memes) return (gSavedMemes.innerHTML = 'Not exists memes!');
+
+  const string = memes.map(
+    (meme) =>
+      `<img src="${meme.img}" data-id="${meme.id}" onclick="onSelectedImage(this)" />`
+  );
+
+  gSavedMemes.innerHTML = string.join('');
 }
 
 function initGallery(ev) {
@@ -71,8 +84,7 @@ function getFilteredImages() {
 
   return gImages;
 }
-function renderMemes() {
-  
+
+function hideGallery() {
+  gGallery.classList.add('dn');
 }
-
-
