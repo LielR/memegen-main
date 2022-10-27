@@ -125,7 +125,6 @@ function loadEditor() {
 function hideEditor() {
   gEditor.classList.remove('df')
   gEditor.classList.add('dn')
-  gFooter.classList.remove('active')
 }
 
 function renderMeme() {
