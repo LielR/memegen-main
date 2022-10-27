@@ -12,7 +12,7 @@
     <div class="main-screen""></div>
     <div class="main-layout">
       <header class="main-header df sb ac">
-        <a class="logo" href="#" onclick="onInitGallery(event)">MEME GENERATOR</a>
+        <a class="logo" href="#" onclick="onInitGallery(event)"><img class="logo-header" src="https://freepngimg.com/thumb/categories/1749.png"/> MEME GENERATOR </a>
         <nav class="main-nav">
           <ul class="ln df">
             <li><a href="#" onclick="onInitGallery(event)">Gallery</a></li>
@@ -40,13 +40,86 @@
           </div>
           <div class="selection"></div>
         </div>
+        <div class="main-memes dn">
+          <div class="saved-memes"></div>
+        </div>
+        <div class="main-about dn jc">
+          <div class="overlay" onclick="onHideAbout()"></div>
+          <div class="about-info">
+            <h1>Memes Generator - Liel Raui</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi architecto
+            </p><p></p>iusto magni aut facilis in consequuntur, earum cum sapiente rem facere illo ipsum et, doloremque nam recusandae sunt possimus harum.</p>
+              <ul class="ln df jc">
+              <li>
+                <a href="https://www.facebook.com/profile.php?id=100000746496683" target="_blank"><i class="fab fa-facebook-square"></i></a>
+              </li>
+              <li>
+                <a href="https://github.com/LielR" target="_blank"><i class="fab fa-github-square"></i></a>
+              </li>
+              <li>
+                <a href="" target="_blank"><i class="fab fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="main-editor dn sb">
+          <canvas class="main-canvas" width="500" height="500"></canvas>
+          <div class="controls df dc ac">
+            <input type="text" class="main-input" onkeydown="onSetText(this)" onkeyup="onSetText(this)" />
+            <section class="text-scd">
+              <input type="image" src="img/ui/switch.png" alt="" onclick="onSwitchText()" />
+              <input type="image" src="img/ui/add.png" alt="" onclick="onAddText()" />
+              <input type="image" src="img/ui/remove.png" alt="" onclick="onRemoveText()" />
+            </section>
+            <section class="rich-text">
+              <div class="push df sb">
+                <input type="image" src="img/ui/aplus.png" alt="" onclick="onIncreaseFont()" />
+                <input type="image" src="img/ui/aminus.png" alt="" onclick="onDecreaseFont()" />
+                <input type="image" src="img/ui/left.png" alt="" onclick="onAlignText('left')" />
+                <input type="image" src="img/ui/center.png" alt="" onclick="onAlignText('center')" />
+                <input type="image" src="img/ui/right.png" alt="" onclick="onAlignText('right')" />
+              </div>
+              <div class="df sb">
+                <select class="main-font" style="font-family: Impact" onchange="onSelectFont(this)">
+                  <option value="Impact" style="font-family: Impact">IMPACT</option>
+                  <option value="Arial" style="font-family: Arial">ARIAL</option>
+                  <option value="Cambria" style="font-family: Cambria">CAMBRIA</option>
+                  <option value="Georgia" style="font-family: Georgia">GEORGIA</option>
+                  <option value="Verdana" style="font-family: Verdana">VERDANA</option>
+                </select>
+                <div class="palette pr dib">
+                  <input type="image" src="img/ui/palette.png" alt="" />
+                  <input type="color" onchange="onSetFillColor(this)" />
+                </div>
+                <div class="palette pr dib">
+                  <input type="image" src="img/ui/stroke.png" alt="" />
+                  <input type="color" onchange="onSetStrokeColor(this)" />
+                </div>
+              </div>
+            </section>
+            <section class="dns df sb">
+              <div class="save tooltip pr">
+                <input class="sv-link disabled" type="image" width="165" height="43" src="img/ui/save.png" alt="" onclick="onClickSave()" />
+                <span class="tooltip-text">Please remove the selection from the text on canvas</span>
+              </div>
+              <div class="download tooltip pr">
+                <a href="#" class="dl-link disabled" onclick="onClickDownload(this, event)">
+                  <img src="img/ui/download.png" width="165" height="43" alt="" />
+                </a>
+                <span class="tooltip-text">Please remove the selection from the text on canvas</span>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+        <footer class="main-footer-container">
+          <small>Memes Generator 2022 - Sprint 2</small>
+        </footer>
+        <script src="js/services/utils-service.js"></script>
+        <script src="js/services/storage-service.js"></script>
+        <script src="js/services/gallery-service.js"></script>
+        <script src="js/gallery-controller.js"></script>
+        <script src="js/services/editor-service.js"></script>
+        <script src="js/editor-controller.js"></script>
 </body>
-
-    <script src="js/services/utils-service.js"></script>
-    <script src="js/services/storage-service.js"></script>
-    <script src="js/services/gallery-service.js"></script>
-    <script src="js/gallery-controller.js"></script>
-    <script src="js/services/editor-service.js"></script>
-    <script src="js/editor-controller.js"></script>
-
 </html>
