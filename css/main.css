@@ -147,7 +147,7 @@ body.menu-open .main-nav ul {
   color: inherit;
 }
 
-.main-header .mobile-ham {
+.main-header .ham-button {
   border: 0;
   cursor: pointer;
   font-size: 1.5rem;
@@ -222,8 +222,8 @@ body.menu-open .main-nav ul {
 }
 
 .main-gallery .top-bar .demo-data .keyword-click:hover {
-  color: #21252b;
-  transition: color 0.2s ease-in-out;
+  color: #ff0000;
+
 }
 .logo-header{
   width: 100px;
@@ -311,7 +311,7 @@ body.menu-open .main-nav ul {
 
 .main-about .about-info a:hover {
   opacity: 0.5;
-  transition: opacity 0.2s ease-in-out;
+  transition: 0.2s;
 }
 
 /* MAIN EDITOR */
@@ -470,7 +470,7 @@ body.menu-open .main-nav ul {
     line-height: 2.25rem;
     text-decoration: none;
   }
-  .main-header .mobile-ham {
+  .main-header .ham-button {
     display: none;
   }
 
