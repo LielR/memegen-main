@@ -508,9 +508,9 @@ body.menu-open .main-nav ul {
   }
 }
 
-@media (max-width: 542px) {
+@media (max-width: 450px) {
   .main-editor {
-    display: none;
+    display: block;
   }
 
   body.unavailable .main-unavailable {
