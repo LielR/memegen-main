@@ -133,7 +133,7 @@ function renderKeywords() {
   const randomly = () => Math.random() - 0.5;
   const dynamicKeywords = [].concat(kw).sort(randomly);
 
-  gKeywords = Array(5).fill({});
+  gKeywords = Array(6).fill({});
 
   gKeywords.forEach((t, i) => {
     gKeywords[i] = { keyword: dynamicKeywords[i], clicks: 0 };

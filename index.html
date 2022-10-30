@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/main.css" />
 </head>
 <body onload="onInit()">
-    <div class="main-screen""></div>
+    
     <div class="main-layout">
       <header class="main-header df sb ac">
         <a class="logo" href="#" onclick="onInitGallery(event)"><img class="logo-header" src="https://freepngimg.com/thumb/categories/1749.png"/> MEME GENERATOR </a>
@@ -81,7 +81,7 @@
                 <input type="image" src="img/ui/right.png" alt="" onclick="onAlignText('right')" />
               </div>
               <div class="df sb">
-                <select class="main-font" style="font-family: Impact" onchange="onSelectFont(this)">
+                <select class="main-font" style="font-family: Impact" oninput="onSelectFont(this)">
                   <option value="Impact" style="font-family: Impact">IMPACT</option>
                   <option value="Arial" style="font-family: Arial">ARIAL</option>
                   <option value="Cambria" style="font-family: Cambria">CAMBRIA</option>
@@ -90,11 +90,11 @@
                 </select>
                 <div class="palette pr dib">
                   <input type="image" src="img/ui/palette.png" alt="" />
-                  <input type="color" onchange="onSetFillColor(this)" />
+                  <input type="color" oninput="onSetFillColor(this)" />
                 </div>
                 <div class="palette pr dib">
                   <input type="image" src="img/ui/stroke.png" alt="" />
-                  <input type="color" onchange="onSetStrokeColor(this)" />
+                  <input type="color" oninput="onSetStrokeColor(this)" />
                 </div>
               </div>
             </section>
@@ -112,11 +112,9 @@
             </section>
           </div>
         </div>
-        <article>
           <footer class="main-footer-container df dc f1 ac">
             <small>Memes Generator 2022 - Sprint 2</small>
           </footer>
-      </article>
       </div>
       </main>
         <script src="js/services/utils-service.js"></script>
