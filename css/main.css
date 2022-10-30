@@ -301,10 +301,13 @@ body.menu-open .main-nav ul {
 
 /* MAIN EDITOR */
 .main-editor .main-canvas {
-  width: 510px;
+  width: 700px;
+  height: 512px;
   border-radius: 1.5rem;
   border: 5px solid #373b41;
   cursor: crosshair;
+  /* gap: 10px; */
+  margin-right: 10px;
 }
 
 .main-editor .controls {
@@ -489,12 +492,16 @@ body.menu-open .main-nav ul {
 }
 
 @media (max-width: 450px) {
-  .main-editor {
-    display: block;
-  }
 
   body.unavailable .main-unavailable {
     display: block;
+  }
+  .main-editor .main-canvas {
+    display: block;
+    width: 512px;
+    border-radius: 1.5rem;
+    border: 5px solid #373b41;
+    cursor: crosshair;
   }
 }
 
@@ -507,6 +514,15 @@ body.menu-open .main-nav ul {
   .main-editor .controls {
     width: 510px;
     margin-top: 1rem;
+  }
+  .main-editor .main-canvas {
+    flex-direction: column;
+    align-items: center;
+    display: block;
+    width: 512px;
+    border-radius: 1.5rem;
+    border: 5px solid #373b41;
+    cursor: crosshair;
   }
 }
 
